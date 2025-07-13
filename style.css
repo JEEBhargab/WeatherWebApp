@@ -1,0 +1,123 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background 0.5s ease-in-out;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+}
+
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.search-box input[type="text"] {
+  padding: 12px 16px;
+  border: 2px solid #0077c2;
+  border-radius: 25px;
+  font-size: 1rem;
+  width: 250px;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input:focus {
+  border-color: #005fa3;
+  box-shadow: 0 0 10px rgba(0, 119, 194, 0.4);
+}
+
+.search-box button {
+  padding: 12px 20px;
+  background-color: #0077c2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.search-box button:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+.weather-card img {
+  width: 60px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+#customIcon {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input, .search-box button {
+    width: 100%;
+  }
+}
+
+
+body.sunny {
+  background: linear-gradient(to bottom, #fceabb, #f8b500);
+}
+
+body.cloudy {
+  background: linear-gradient(to bottom, #d7d2cc, #304352);
+}
+
+body.rainy {
+  background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+}
+
+body.snowy {
+  background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+}
+
+body.default {
+  background: linear-gradient(to bottom, #cdeffd, #f0f9ff);
+}

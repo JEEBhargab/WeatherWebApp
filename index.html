@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="default">
+  <main class="container">
+    <h1>🌤️ Weather App</h1>
+
+    
+    <form id="weatherForm" class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name" required />
+      <button type="submit"><i class="fa fa-search"></i> Search</button>
+    </form>
+
+    <p id="error" class="error"></p>
+
+   
+    <section id="weatherData" class="weather-card" style="display: none;">
+      <h2 id="location"></h2>
+      <div id="weatherIcons">
+        <i id="customIcon" class="fa-solid"></i>
+        <img id="icon" src="" alt="Weather Icon" />
+      </div>
+      <p id="condition"></p>
+      <ul>
+        <li><strong>🌡 Temperature:</strong> <span id="temperature"></span>°C</li>
+        <li><strong>💧 Humidity:</strong> <span id="humidity"></span>%</li>
+        <li><strong>🌬 Wind:</strong> <span id="wind"></span> km/h</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
